@@ -1,33 +1,10 @@
-function showQuestion(questionNumber) {
-  document.getElementById("questions").style.display = "block";
-  document.getElementById("summary").style.display = "none";
-  
-  if (questionNumber === 2) {
-    const creditLimitSlider = document.querySelector(
-      'input[name="creditLimit"]'
-    );
-    const creditLimitOutput = document.querySelector(
-      'output[for="creditLimit"]'
-    );
-    creditLimitOutput.textContent = creditLimitSlider.value;
-    creditLimitSlider.addEventListener("input", () => {
-      creditLimitOutput.textContent = creditLimitSlider.value;
-    });
-  }
-
-  for (let i = 1; i <= 5; i++) {
-    document.getElementById("question" + i).style.display =
-      i === questionNumber ? "block" : "none";
-  }
-}
-
 function showSummary() {
   const productType = document.querySelector(
     'input[name="productType"]:checked'
   ).value;
   const creditLimit = document.querySelector('input[name="creditLimit"]').value;
-  const productPurpose = document.querySelector(
-    'select[name="productPurpose"]'
+  const loanTerm = document.querySelector(
+    'select[name="loanTerm"]'
   ).value;
   const features = [
     ...document.querySelectorAll('input[name="features"]:checked'),
@@ -38,7 +15,7 @@ function showSummary() {
 
   document.getElementById("summaryProductType").textContent = productType;
   document.getElementById("summaryCreditLimit").textContent = creditLimit;
-  document.getElementById("summaryProductPurpose").textContent = productPurpose;
+  document.getElementById("summaryProductPurpose").textContent = loanTerm;
   document.getElementById("summaryProductFeatures").textContent = features;
   document.getElementById("summaryComments").textContent = comments;
 

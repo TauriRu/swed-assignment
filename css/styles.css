@@ -1,11 +1,82 @@
-/* Reset some default styles for consistent rendering */
+@font-face {
+  font-family: 'SwedbankHeadline-Black';
+  src: url('fonts/headLine/SwedbankHeadline-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwedbankHeadline-Bold';
+  src: url('fonts/headLine/SwedbankHeadline-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwedbankSans-Medium';
+  src: url('fonts/webFont/SwedbankSans-Medium.ttf') format('truetype'),
+      url('fonts/webFont/SwedbankSans-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwedbankSans-Regular';
+  src: url('fonts/webFont/SwedbankSans-Regular.ttf') format('truetype'),
+      url('fonts/webFont/SwedbankSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --ui-color-orange: #ff5f00;
+    --ui-color-orange-text: #fb4f00;
+    --ui-color-tangerine: #ff9100;
+    --ui-color-pineapple: #fdc92a;
+    --ui-color-peach: #fff1cd;
+    --ui-color-apricot: #fdf6ee;
+    --ui-color-turquoise: #31a3ae;
+    --ui-color-teal: #257886;
+    --ui-color-seafoam: #8acdc3;
+    --ui-color-aqua: #bbead9;
+    --ui-color-sky: #dbf8ed;
+    --ui-color-mist: #ecf9f3;
+    --ui-color-lilac: #c5569a;
+    --ui-color-tulip: #990066;
+    --ui-color-lavender: #d28ac5;
+    --ui-color-iris: #f8dbf5;
+    --ui-color-rose: #ffecff;
+    --ui-color-thistle: #fbf3f7;
+    --ui-color-bark: #512b2b;
+    --ui-color-bark-rgb: 81,43,43;
+    --ui-color-blue: #5b8ad6;
+    --ui-color-mediumbrown: #72605e;
+    --ui-color-softbrown: #896f6f;
+    --ui-color-lighterbark: #dec9c9;
+    --ui-color-extrasoft-bark: #e5dcd7;
+    --ui-color-lightbrown: #d4c4bc;
+    --ui-color-darkvanilla: #d4b8a3;
+    --ui-color-grey: #ebe7e2;
+    --ui-color-listgrey: #999;
+    --ui-color-lightgrey: #f9f8f6;
+
+  --primary-header-black: 'SwedbankHeadline-Black', sans-serif;
+  --primary-header-bold: 'SwedbankHeadline-Bold', sans-serif;
+
+  --body-font: 'SwedbankSans-Regular', sans-serif;
+}
+
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+    
+  }
+  h1, h2, h3{
+    font-family: var(--primary-header-bold);
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: var( --body-font);
     background-color: #f0f0f0;
   }
   
@@ -22,9 +93,9 @@ body, h1, h2, p, ul, li {
   }
   
   h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #0066cc;
+    color: var(--ui-color-orange-text);
+    font: 32px/1 var(--primary-header-black);
+    margin: 0;
   }
   
   .intro, #questions, #summary {
@@ -37,22 +108,31 @@ body, h1, h2, p, ul, li {
   }
   
   button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    background-color: #0066cc;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
+    color: #fff;
+    border-radius: 3px;
+    line-height: 18px;
+    transition: color 0.3s ease-out;
+    background: none var(--ui-color-orange);
+    border: 1px solid var(--ui-color-orange);
+    display: inline-block;
+    -webkit-appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 13px 15px;
+    font: 18px/1 var(--body-font);
   }
   
   button:hover {
-    background-color: #0052a3;
+    border: 1px solid var(--ui-color-orange);
+    background: var(--ui-color-orange-text);
+    text-decoration: none;
   }
   
   button:active {
-    background-color: #004d9e;
+    background-color: var(--ui-color-pineapple);
+    border-color: var(--ui-color-pineapple)
   }
   
   #questions select,

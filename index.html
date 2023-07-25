@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swedbank Application Form</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="script.js"></script>
+  <script src="js/questionaire.js"></script>
 </head>
 <body>
   <div class="container">
@@ -16,7 +18,7 @@
         <button id="startBtn" onclick="showQuestion(1)">Start</button>
       </div>
       <div id="questions">
-        <div id="question1">
+        <div id="question1" style="display: none;">
           <h2>Question 1 of 5:</h2>
           <p>What type of product are you applying for?</p>
           <label><input type="radio" name="productType" value="creditCard" required> Credit Card</label>
@@ -24,7 +26,7 @@
           <label><input type="radio" name="productType" value="carLeasing"> Car Leasing</label>
           <button onclick="showQuestion(2)">Next</button>
         </div>
-        <div id="question2" style="display: none;">
+        <div id="question2">
             <h2>Question 2 of 5:</h2>
             <p>What is your preferred credit limit?</p>
             <input type="range" name="creditLimit" min="1000" max="10000" step="100" required>
@@ -32,16 +34,12 @@
             <button onclick="showQuestion(1)">Previous</button>
             <button onclick="showQuestion(3)">Next</button>
           </div>
-          
         <div id="question3">
           <h2>Question 3 of 5:</h2>
-          <p>Select the purpose of the product:</p>
-          <select name="productPurpose" required>
-            <option value="" disabled selected>Select an option</option>
-            <option value="shopping">Shopping</option>
-            <option value="travel">Travel</option>
-            <option value="education">Education</option>
-          </select>
+          <p>Choose loan term:</p>
+          <p>What is your preferred credit limit?</p>
+          <input type="range" name="loanTerm" min="1" max="10" step="1" required>
+          <output for="loanTerm">0</output>
           <button onclick="showQuestion(2)">Previous</button>
           <button onclick="showQuestion(4)">Next</button>
         </div>
@@ -73,6 +71,6 @@
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+
 </body>
 </html>
