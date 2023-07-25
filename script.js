@@ -4,7 +4,7 @@ function showSummary() {
   ).value;
   const creditLimit = document.querySelector('input[name="creditLimit"]').value;
   const loanTerm = document.querySelector(
-    'select[name="loanTerm"]'
+    'input[name="loanTerm"]'
   ).value;
   const features = [
     ...document.querySelectorAll('input[name="features"]:checked'),
