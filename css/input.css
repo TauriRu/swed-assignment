@@ -61,7 +61,13 @@ input[type="range"] {
     color: white; /* Color of the checkmark */
     position: absolute;
     left: 1px;
-    top: -1; 
+    top: 0px; 
     font-size: 14px;
     line-height: 1;
+  }
+  @-moz-document url-prefix() {
+    input[type="checkbox"]:checked::before {
+      top: -3px;
+      left: 0px;
+    }
   }

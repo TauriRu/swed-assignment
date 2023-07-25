@@ -1,5 +1,7 @@
 function showQuestion(questionNumber) {
-  for (let i = 1; i <= 5; i++) {
+  const totalQuestions = 5;
+
+  for (let i = 1; i <= totalQuestions; i++) {
     document.getElementById("question" + i).style.display =
       i === questionNumber ? "block" : "none";
   }
@@ -17,21 +19,9 @@ function showQuestion(questionNumber) {
     const creditLimitOutput = document.querySelector(
       'output[for="creditLimit"]'
     );
-    creditLimitOutput.textContent = creditLimitSlider.value;
+    creditLimitOutput.textContent = creditLimitSlider.value + "€";
     creditLimitSlider.addEventListener("input", () => {
-      creditLimitOutput.textContent = creditLimitSlider.value;
-    });
-  }
-
-  // For Question 3 (loanTerm slider)
-  if (questionNumber === 3) {
-    document.addEventListener("DOMContentLoaded", function () {
-      const loanTermSlider = document.querySelector('select[name="loanTerm"]');
-      const loanTermOutput = document.querySelector('output[for="loanTerm"]');
-      loanTermOutput.textContent = loanTermSlider.value;
-      loanTermSlider.addEventListener("change", () => {
-        loanTermOutput.textContent = loanTermSlider.value;
-      });
+      creditLimitOutput.textContent = creditLimitSlider.value + "€";
     });
   }
 }

@@ -43,6 +43,12 @@ function showSummary() {
 }
 
 // refresh page if clicked on logo
+function clearURL() {
+  // Clear the query parameters from the URL
+  history.replaceState({}, document.title, window.location.pathname);
+}
+
 function refreshPage() {
-  window.location.reload();
+  clearURL(); // Clear the URL first
+  document.location.reload(); // Reload the page
 }

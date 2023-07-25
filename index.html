@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" href="favicon.ico">
       <title>Swedbank Application Form</title>
       <link rel="stylesheet" href="css/styles.css">
       <link rel="stylesheet" href="css/input.css">
@@ -15,7 +16,7 @@
       <div class="container">
          <div class="logo-container">
             <a href="#" class="logo" onclick="refreshPage()" id="refresh-button">
-            <img src="https://www.swedbank.ee/webjars/webcomponents/2.9.0/assets/images/swedbank-logo.svg"/>
+            <img src="images/swedbank-logo.svg" alt="swedbank-logo"/>
             </a>
          </div>
          <div class="form">
@@ -28,7 +29,7 @@
                <div id="questions">
                   <div id="question1" style="display: none;">
                      <h2>Question 1 of 5:</h2>
-                     <p>What type of product are you applying for?</p>
+                     <p>What type of loan are you applying for?</p>
                      <div class="questionsContainer">
                         <label><input type="radio" name="productType" value="Credit Card"> Credit Card</label>
                         <label><input type="radio" name="productType" value="Small Loan"> Small Loan</label>
@@ -105,7 +106,7 @@
                   </div>
                </div>
             </form>
-            <div id="summary" style="display: none;">
+            <div id="summary" class="summary" style="display: none;">
                <h2>Summary:</h2>
                <p><strong>Product Type:</strong> <span id="summaryProductType"></span></p>
                <p><strong>Credit Limit:</strong> <span id="summaryCreditLimit"></span></p>
@@ -114,6 +115,7 @@
                <p><strong>Product Features:</strong> <span id="summaryProductFeatures"></span></p>
                <p><strong>Additional Comments:</strong> <span id="summaryComments"></span></p>
                <p><strong>Monthly Payment:</strong> <span id="summaryMonthlyPayment"></span></p>
+               <button onclick="goBack()">Go Back</button>
                <button onclick= "refreshPage()">Start over</button>
             </div>
          </div>
