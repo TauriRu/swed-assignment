@@ -66,19 +66,23 @@
   --body-font: 'SwedbankSans-Regular', sans-serif;
 }
 
-body, h1, h2, p, ul, li {
+body{
     margin: 0;
     padding: 0;
-    
   }
   h1, h2, h3{
     font-family: var(--primary-header-bold);
   }
   
-  body {
-    font-family: var( --body-font);
-    background-color: #f0f0f0;
-  }
+  body{ 
+    color: var(--ui-color-bark);
+    background-color: var(--ui-color-apricot);
+    position: relative;
+    font-family: var(--body-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(254,236,190,.5);
+}
   
   .container {
     max-width: 600px;
@@ -94,8 +98,10 @@ body, h1, h2, p, ul, li {
   
   h1 {
     color: var(--ui-color-orange-text);
-    font: 32px/1 var(--primary-header-black);
+    font-size: 32px
     margin: 0;
+    font-family: var(--primary-header-bold);
+    padding: 10px;
   }
   
   .intro, #questions, #summary {
@@ -121,7 +127,7 @@ body, h1, h2, p, ul, li {
     box-sizing: border-box;
     text-align: center;
     padding: 13px 15px;
-    font: 18px/1 var(--body-font);
+    font-size: 18px;
   }
   
   button:hover {
