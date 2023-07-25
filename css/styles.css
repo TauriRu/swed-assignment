@@ -7,23 +7,23 @@
 
 @font-face {
   font-family: 'SwedbankHeadline-Bold';
-  src: url('fonts/headLine/SwedbankHeadline-Bold.ttf') format('truetype');
+  src: url('../fonts/headLine/SwedbankHeadline-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SwedbankSans-Medium';
-  src: url('fonts/webFont/SwedbankSans-Medium.ttf') format('truetype'),
-      url('fonts/webFont/SwedbankSans-Medium.woff') format('woff');
+  src: url('../fonts/webFont/SwedbankSans-Medium.ttf') format('truetype'),
+      url('../fonts/webFont/SwedbankSans-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SwedbankSans-Regular';
-  src: url('fonts/webFont/SwedbankSans-Regular.ttf') format('truetype'),
-      url('fonts/webFont/SwedbankSans-Regular.woff') format('woff');
+  src: url('../fonts/webFont/SwedbankSans-Regular.ttf') format('truetype'),
+      url('../fonts/webFont/SwedbankSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
