@@ -1,4 +1,8 @@
 function showSummary() {
+ 
+  const errorMessages = document.querySelectorAll(".error-message");
+  errorMessages.forEach((errorMessage) => (errorMessage.textContent = ""));
+  
   const productType = document.querySelector(
     'input[name="productType"]:checked'
   ).value;
@@ -9,8 +13,8 @@ function showSummary() {
     document.querySelector('select[name="loanTerm"]').value
   );
   const interestRate = 0.05; // Hard-coded interest rate of 5%
-  const features = [
-    ...document.querySelectorAll('input[name="features"]:checked'),
+  const loanPurpose = [
+    ...document.querySelectorAll('input[name="loanPurpose"]:checked'),
   ]
     .map((input) => input.value)
     .join(", ");
@@ -31,12 +35,13 @@ function showSummary() {
     interestRate + "%";
   document.getElementById("summaryMonthlyPayment").textContent =
     "€" + monthlyPayment;
-  document.getElementById("summaryProductFeatures").textContent = features;
+  document.getElementById("summaryProductFeatures").textContent = loanPurpose;
   document.getElementById("summaryComments").textContent = comments;
 
   document.getElementById("questions").style.display = "none";
   document.getElementById("summary").style.display = "block";
 }
+
 // refresh page if clicked on logo
 function refreshPage() {
   window.location.reload();

@@ -59,6 +59,7 @@
     --ui-color-grey: #ebe7e2;
     --ui-color-listgrey: #999;
     --ui-color-lightgrey: #f9f8f6;
+    --ui-color-error: #C53F40;
 
   --primary-header-black: 'SwedbankHeadline-Black', sans-serif;
   --primary-header-bold: 'SwedbankHeadline-Bold', sans-serif;
@@ -215,4 +216,18 @@ label{
   justify-content: center;
   position: relative;
   align-items: center;
+}
+select {
+  font-family: var(--body-font);
+}
+label [name="comments"]{
+  width: 100%;
+  height: 100px;
+  resize: none;
+  font-family: var(--body-font);
+}
+.error{
+  display: block;
+  color: var(--ui-color-error);
+  padding: 5px 0;
 }
