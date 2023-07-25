@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'SwedbankHeadline-Black';
-  src: url('fonts/headLine/SwedbankHeadline-Black.ttf') format('truetype');
+  src: url('../fonts/headLine/SwedbankHeadline-Black.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -193,4 +193,26 @@ body{
   #summary.hidden {
     display: none;
   }
-  
+  .questionsContainer{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
+  }
+  .questionsContainer label{
+    padding: 0 0 10px;
+  }
+.logo-container{
+  width: 100%;
+  text-align: center;
+}
+.logo-container .logo img{
+  width: 200px;
+}
+label{
+  display:flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}

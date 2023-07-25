@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swedbank Application Form</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/input.css">
   <script src="script.js"></script>
   <script src="js/questionaire.js"></script>
   <script src="js/validation.js"></script>
@@ -12,11 +13,15 @@
 </head>
 <body>
   <div class="container">
-    <img src="https://www.swedbank.ee/webjars/webcomponents/2.9.0/assets/images/swedbank-logo.svg"/>
+    <div class="logo-container">
+        <a href="#" class="logo" onclick="refreshPage()" id="refresh-button">
+            <img src="https://www.swedbank.ee/webjars/webcomponents/2.9.0/assets/images/swedbank-logo.svg"/>
+        </a>
+    </div>  
     <div class="form">
       <h1>Swedbank Application Form</h1>
          <form id="applicationForm" onsubmit="return false;">
-      <div class="intro">
+      <div class="intro" id="intro">
         <p>Welcome to the Swedbank application form. Please fill out the following questions to apply for our product.</p>
         <button id="startBtn" onclick="showQuestion(1)">Start</button>
       </div>
@@ -24,16 +29,20 @@
         <div id="question1" style="display: none;">
           <h2>Question 1 of 5:</h2>
           <p>What type of product are you applying for?</p>
-          <label><input type="radio" name="productType" value="creditCard" required> Credit Card</label>
+          <div class="questionsContainer">
+          <label><input type="radio" name="productType" value="creditCard" checked> Credit Card</label>
           <label><input type="radio" name="productType" value="smallLoan"> Small Loan</label>
           <label><input type="radio" name="productType" value="carLeasing"> Car Leasing</label>
-          <button onclick="showQuestion(2)">Next</button>
+        </div>
+        <button onclick="showQuestion(2)">Next</button>
         </div>
         <div id="question2">
             <h2>Question 2 of 5:</h2>
             <p>What is your preferred credit limit?</p>
-            <input type="range" name="creditLimit" min="1000" max="10000" step="100" required>
-            <output for="creditLimit">0</output>
+            <div class="questionsContainer">
+                <input type="range" name="creditLimit" min="1000" max="10000" step="100" required>
+                <output for="creditLimit">0</output>
+            </div>
             <button onclick="showQuestion(1)">Previous</button>
             <button onclick="showQuestion(3)">Next</button>
           </div>
@@ -41,25 +50,39 @@
           <h2>Question 3 of 5:</h2>
           <p>Choose loan term:</p>
           <p>What is your preferred loan term?</p>
-          <input type="range" name="loanTerm" min="1" max="10" step="1" required>
-          <output for="loanTerm">0</output>
+          <div class="questionsContainer">
+            <select name="loanTerm" required>
+                <option value="1" aria-checked="true">1 year</option>
+                <option value="2">2 years</option>
+                <option value="3">3 years</option>
+                <option value="4">4 years</option>
+                <option value="5">5 years</option>
+                <option value="6">6 years</option>
+                <option value="7">7 years</option>
+                <option value="8">8 years</option>
+                <option value="9">9 years</option>
+                <option value="10">10 years</option>
+              </select>
+        </div>
           <button onclick="showQuestion(2)">Previous</button>
           <button onclick="showQuestion(4)">Next</button>
         </div>
         <div id="question4">
-          <h2>Question 4 of 5:</h2>
-          <p>What features do you want in your product? (Select all that apply)</p>
-          <label><input type="checkbox" name="features" value="rewards"> Rewards Program</label>
-          <label><input type="checkbox" name="features" value="cashback"> Cashback</label>
-          <label><input type="checkbox" name="features" value="lowInterest"> Low Interest Rate</label>
-          <button onclick="showQuestion(3)">Previous</button>
-          <button onclick="showQuestion(5)">Next</button>
-        </div>
+            <h2>Question 4 of 5:</h2>
+            <p>What do you need this loan for? (Select all that apply)</p>
+            <div class="questionsContainer">
+              <label><input type="checkbox" name="loanPurpose" value="personal"> Personal</label>
+              <label><input type="checkbox" name="loanPurpose" value="business"> Business</label>
+              <label><input type="checkbox" name="loanPurpose" value="education"> Education</label>
+              <label><input type="checkbox" name="loanPurpose" value="home"> Home</label>
+            </div>
+            <button onclick="showQuestion(3)">Previous</button>
+            <button onclick="showQuestion(5)">Next</button>
+          </div>
         <div id="question5">
             <h2>Question 5 of 5:</h2>
             <p>Do you have any additional comments or requirements? (max 200 characters)</p>
             <label>
-                Additional Comments:
                 <textarea name="comments" rows="4" cols="50"></textarea>
               </label>
             <button onclick="showQuestion(4)">Previous</button>
