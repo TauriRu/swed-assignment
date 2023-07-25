@@ -4,200 +4,184 @@
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'SwedbankHeadline-Bold';
   src: url('../fonts/headLine/SwedbankHeadline-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'SwedbankSans-Medium';
-  src: url('../fonts/webFont/SwedbankSans-Medium.ttf') format('truetype'),
-      url('../fonts/webFont/SwedbankSans-Medium.woff') format('woff');
+  src: url('../fonts/webFont/SwedbankSans-Medium.ttf') format('truetype'), url('../fonts/webFont/SwedbankSans-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'SwedbankSans-Regular';
-  src: url('../fonts/webFont/SwedbankSans-Regular.ttf') format('truetype'),
-      url('../fonts/webFont/SwedbankSans-Regular.woff') format('woff');
+  src: url('../fonts/webFont/SwedbankSans-Regular.ttf') format('truetype'), url('../fonts/webFont/SwedbankSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
 :root {
   --ui-color-orange: #ff5f00;
-    --ui-color-orange-text: #fb4f00;
-    --ui-color-tangerine: #ff9100;
-    --ui-color-pineapple: #fdc92a;
-    --ui-color-peach: #fff1cd;
-    --ui-color-apricot: #fdf6ee;
-    --ui-color-turquoise: #31a3ae;
-    --ui-color-teal: #257886;
-    --ui-color-seafoam: #8acdc3;
-    --ui-color-aqua: #bbead9;
-    --ui-color-sky: #dbf8ed;
-    --ui-color-mist: #ecf9f3;
-    --ui-color-lilac: #c5569a;
-    --ui-color-tulip: #990066;
-    --ui-color-lavender: #d28ac5;
-    --ui-color-iris: #f8dbf5;
-    --ui-color-rose: #ffecff;
-    --ui-color-thistle: #fbf3f7;
-    --ui-color-bark: #512b2b;
-    --ui-color-bark-rgb: 81,43,43;
-    --ui-color-blue: #5b8ad6;
-    --ui-color-mediumbrown: #72605e;
-    --ui-color-softbrown: #896f6f;
-    --ui-color-lighterbark: #dec9c9;
-    --ui-color-extrasoft-bark: #e5dcd7;
-    --ui-color-lightbrown: #d4c4bc;
-    --ui-color-darkvanilla: #d4b8a3;
-    --ui-color-grey: #ebe7e2;
-    --ui-color-listgrey: #999;
-    --ui-color-lightgrey: #f9f8f6;
-    --ui-color-error: #C53F40;
-
+  --ui-color-orange-text: #fb4f00;
+  --ui-color-tangerine: #ff9100;
+  --ui-color-pineapple: #fdc92a;
+  --ui-color-peach: #fff1cd;
+  --ui-color-apricot: #fdf6ee;
+  --ui-color-turquoise: #31a3ae;
+  --ui-color-teal: #257886;
+  --ui-color-seafoam: #8acdc3;
+  --ui-color-aqua: #bbead9;
+  --ui-color-sky: #dbf8ed;
+  --ui-color-mist: #ecf9f3;
+  --ui-color-lilac: #c5569a;
+  --ui-color-tulip: #990066;
+  --ui-color-lavender: #d28ac5;
+  --ui-color-iris: #f8dbf5;
+  --ui-color-rose: #ffecff;
+  --ui-color-thistle: #fbf3f7;
+  --ui-color-bark: #512b2b;
+  --ui-color-bark-rgb: 81,43,43;
+  --ui-color-blue: #5b8ad6;
+  --ui-color-mediumbrown: #72605e;
+  --ui-color-softbrown: #896f6f;
+  --ui-color-lighterbark: #dec9c9;
+  --ui-color-extrasoft-bark: #e5dcd7;
+  --ui-color-lightbrown: #d4c4bc;
+  --ui-color-darkvanilla: #d4b8a3;
+  --ui-color-grey: #ebe7e2;
+  --ui-color-listgrey: #999;
+  --ui-color-lightgrey: #f9f8f6;
+  --ui-color-error: #C53F40;
   --primary-header-black: 'SwedbankHeadline-Black', sans-serif;
   --primary-header-bold: 'SwedbankHeadline-Bold', sans-serif;
-
   --body-font: 'SwedbankSans-Regular', sans-serif;
 }
-
-body{
-    margin: 0;
-    padding: 0;
-  }
-  h1, h2, h3{
-    font-family: var(--primary-header-bold);
-  }
-  
-  body{ 
-    color: var(--ui-color-bark);
-    background-color: var(--ui-color-apricot);
-    position: relative;
-    font-family: var(--body-font);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: rgba(254,236,190,.5);
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 600px;
 }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form {
-    text-align: center;
-  }
-  
-  h1 {
-    color: var(--ui-color-orange-text);
-    font-size: 32px
-    margin: 0;
-    font-family: var(--primary-header-bold);
-    padding: 10px;
-  }
-  
-  .intro, #questions, #summary {
-    margin-bottom: 20px;
-  }
-  
-  .intro p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    cursor: pointer;
-    color: #fff;
-    border-radius: 3px;
-    line-height: 18px;
-    transition: color 0.3s ease-out;
-    background: none var(--ui-color-orange);
-    border: 1px solid var(--ui-color-orange);
-    display: inline-block;
-    -webkit-appearance: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 13px 15px;
-    font-size: 18px;
-    font-family: var(--body-font);
-  }
-  
-  button:hover {
-    border: 1px solid var(--ui-color-orange);
-    background: var(--ui-color-orange-text);
-    text-decoration: none;
-  }
-  
-  button:active {
-    background-color: var(--ui-color-pineapple);
-    border-color: var(--ui-color-pineapple)
-  }
-  
-  #questions select,
-  #questions input[type="number"],
-  #questions textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  #questions select {
-    appearance: none; /* Remove default arrow on select */
-  }
-  
-  #questions select::-ms-expand {
-    display: none; /* Remove default arrow on select (IE) */
-  }
-  
-  #questions input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  
-  .summary {
-    text-align: center;
-  }
-  
-  #summary p {
-    margin-bottom: 10px;
-  }
-  
-  /* Show and hide elements based on their visibility */
-  #questions > div[id^="question"] {
-    display: none;
-  }
-  
-  #questions > div[id^="question"]:first-child {
-    display: block;
-  }
-  
-  #summary.hidden {
-    display: none;
-  }
-  .questionsContainer{
-    padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 15px;
-  }
-  .questionsContainer label{
-    padding: 0 0 10px;
-    display:grid;
-    grid-template-columns: 20px 90px;
-  }
+h1, h2, h3{
+  font-family: var(--primary-header-bold);
+}
+body{
+  color: var(--ui-color-bark);
+  background-color: var(--ui-color-apricot);
+  position: relative;
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(254,236,190,.5);
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form {
+  text-align: center;
+  width: 100%;
+}
+h1 {
+  color: var(--ui-color-orange-text);
+  font-size: 32px margin: 0;
+  font-family: var(--primary-header-bold);
+  padding: 10px;
+}
+.intro, #questions, #summary {
+  margin-bottom: 20px;
+}
+.intro p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+button {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 18px;
+  transition: color 0.3s ease-out;
+  background: none var(--ui-color-orange);
+  border: 1px solid var(--ui-color-orange);
+  display: inline-block;
+  -webkit-appearance: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 13px 15px;
+  font-size: 18px;
+  font-family: var(--body-font);
+}
+button:hover {
+  border: 1px solid var(--ui-color-orange);
+  background: var(--ui-color-orange-text);
+  text-decoration: none;
+}
+button:active {
+  background-color: var(--ui-color-pineapple);
+  border-color: var(--ui-color-pineapple) 
+}
+#questions select, #questions input[type="number"], #questions textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+#questions select {
+  appearance: none;
+ /* Remove default arrow on select */
+}
+#questions select::-ms-expand {
+  display: none;
+ /* Remove default arrow on select (IE) */
+}
+#questions input[type="checkbox"] {
+  margin-right: 5px;
+}
+.summary {
+  text-align: center;
+  height: 100%;
+}
+#summaryComments {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow-wrap: break-word;
+}
+#summary p {
+  margin-bottom: 10px;
+}
+/* Show and hide elements based on their visibility */
+#questions > div[id^="question"] {
+  display: none;
+}
+#questions > div[id^="question"]:first-child {
+  display: block;
+}
+#summary.hidden {
+  display: none;
+}
+.questionsContainer{
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+}
+.questionsContainer label{
+  padding: 0 0 10px;
+  display:grid;
+  grid-template-columns: 20px 90px;
+}
 .logo-container{
   width: 100%;
   text-align: center;

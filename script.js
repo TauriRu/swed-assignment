@@ -52,3 +52,8 @@ function refreshPage() {
   clearURL(); // Clear the URL first
   document.location.reload(); // Reload the page
 }
+
+function goBack() {
+  document.getElementById("questions").style.display = "block";
+  document.getElementById("summary").style.display = "none";
+}
