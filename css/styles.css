@@ -65,11 +65,6 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   max-width: 600px;
-}
-h1, h2, h3{
-  font-family: var(--primary-header-bold);
-}
-body{
   color: var(--ui-color-bark);
   background-color: var(--ui-color-apricot);
   position: relative;
@@ -78,6 +73,10 @@ body{
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(254,236,190,.5);
 }
+h1, h2, h3{
+  font-family: var(--primary-header-bold);
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -208,4 +207,9 @@ label [name="comments"]{
   display: block;
   color: var(--ui-color-error);
   padding: 5px 0;
+}
+@media only screen and (max-width: 600px) {
+  body {
+   padding: 15px;
+  }
 }
