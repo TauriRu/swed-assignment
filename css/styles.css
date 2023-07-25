@@ -1,57 +1,109 @@
-
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default styles for consistent rendering */
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
   }
   
   .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 600px;
-  }
-  
-  .intro {
     text-align: center;
   }
   
-  h1, h2, p {
-    margin: 0;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0066cc;
+  }
+  
+  .intro, #questions, #summary {
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
   
   button {
-    background-color: #0072ce;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #0066cc;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #005fa3;
+    background-color: #0052a3;
   }
   
-  textarea {
+  button:active {
+    background-color: #004d9e;
+  }
+  
+  #questions select,
+  #questions input[type="number"],
+  #questions textarea {
     width: 100%;
-    height: 100px;
-    resize: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  #questions select {
+    appearance: none; /* Remove default arrow on select */
+  }
+  
+  #questions select::-ms-expand {
+    display: none; /* Remove default arrow on select (IE) */
+  }
+  
+  #questions input[type="checkbox"] {
+    margin-right: 5px;
   }
   
   #summary {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
+    text-align: left;
+  }
+  
+  #summary p {
+    margin-bottom: 10px;
+  }
+  
+  #summary strong {
+    font-weight: bold;
+  }
+  
+  #summary button {
+    margin-top: 10px;
+  }
+  
+  /* Show and hide elements based on their visibility */
+  #questions > div[id^="question"] {
+    display: none;
+  }
+  
+  #questions > div[id^="question"]:first-child {
+    display: block;
+  }
+  
+  #summary.hidden {
+    display: none;
   }
   
