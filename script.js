@@ -1,6 +1,19 @@
 function showQuestion(questionNumber) {
   document.getElementById("questions").style.display = "block";
   document.getElementById("summary").style.display = "none";
+  
+  if (questionNumber === 2) {
+    const creditLimitSlider = document.querySelector(
+      'input[name="creditLimit"]'
+    );
+    const creditLimitOutput = document.querySelector(
+      'output[for="creditLimit"]'
+    );
+    creditLimitOutput.textContent = creditLimitSlider.value;
+    creditLimitSlider.addEventListener("input", () => {
+      creditLimitOutput.textContent = creditLimitSlider.value;
+    });
+  }
 
   for (let i = 1; i <= 5; i++) {
     document.getElementById("question" + i).style.display =
@@ -31,22 +44,4 @@ function showSummary() {
 
   document.getElementById("questions").style.display = "none";
   document.getElementById("summary").style.display = "block";
-}
-
-function showQuestion(questionNumber) {
-  // Rest of the showQuestion function (unchanged)
-
-  // For Question 2 (creditLimit slider)
-  if (questionNumber === 2) {
-    const creditLimitSlider = document.querySelector(
-      'input[name="creditLimit"]'
-    );
-    const creditLimitOutput = document.querySelector(
-      'output[for="creditLimit"]'
-    );
-    creditLimitOutput.textContent = creditLimitSlider.value;
-    creditLimitSlider.addEventListener("input", () => {
-      creditLimitOutput.textContent = creditLimitSlider.value;
-    });
-  }
 }
