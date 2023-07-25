@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="script.js"></script>
   <script src="js/questionaire.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/monthlyRate.js"></script>
 </head>
 <body>
   <div class="container">
     <img src="https://www.swedbank.ee/webjars/webcomponents/2.9.0/assets/images/swedbank-logo.svg"/>
     <div class="form">
       <h1>Swedbank Application Form</h1>
+         <form id="applicationForm" onsubmit="return false;">
       <div class="intro">
         <p>Welcome to the Swedbank application form. Please fill out the following questions to apply for our product.</p>
         <button id="startBtn" onclick="showQuestion(1)">Start</button>
@@ -37,7 +40,7 @@
         <div id="question3">
           <h2>Question 3 of 5:</h2>
           <p>Choose loan term:</p>
-          <p>What is your preferred credit limit?</p>
+          <p>What is your preferred loan term?</p>
           <input type="range" name="loanTerm" min="1" max="10" step="1" required>
           <output for="loanTerm">0</output>
           <button onclick="showQuestion(2)">Previous</button>
@@ -53,20 +56,22 @@
           <button onclick="showQuestion(5)">Next</button>
         </div>
         <div id="question5">
-          <h2>Question 5 of 5:</h2>
-          <p>Do you have any additional comments or requirements? (max 200 characters)</p>
-          <textarea name="comments" maxlength="200" required></textarea>
-          <button onclick="showQuestion(4)">Previous</button>
-          <button onclick="showSummary()">Submit</button>
-        </div>
+            <h2>Question 5 of 5:</h2>
+            <p>Do you have any additional comments or requirements? (max 200 characters)</p>
+            <textarea name="comments" maxlength="200" rows="4" cols="50" oninput="checkTextareaLength()" required></textarea>
+            <button onclick="showQuestion(4)">Previous</button>
+            <button onclick="showSummary()">Submit</button>
+          </div>
       </div>
       <div id="summary" style="display: none;">
         <h2>Summary:</h2>
         <p><strong>Product Type:</strong> <span id="summaryProductType"></span></p>
         <p><strong>Credit Limit:</strong> <span id="summaryCreditLimit"></span></p>
-        <p><strong>Product Purpose:</strong> <span id="summaryProductPurpose"></span></p>
+        <p><strong>Loan Term:</strong> <span id="summaryLoanTerm"></span> years</p>
+        <p><strong>Interest Rate:</strong> <span id="summaryInterestRate"></span></p>
         <p><strong>Product Features:</strong> <span id="summaryProductFeatures"></span></p>
         <p><strong>Additional Comments:</strong> <span id="summaryComments"></span></p>
+        <p><strong>Monthly Payment:</strong> $<span id="summaryMonthlyPayment"></span></p>
         <button onclick="showQuestion(5)">Edit</button>
       </div>
     </div>
